@@ -72,6 +72,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'testproject.wsgi.application'
 
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'HackBvp2018'
+EMAIL_HOST_PASSWORD = 'bvpcse2018'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases

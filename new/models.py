@@ -21,6 +21,7 @@ Banner is a product that is having following fields:
 class Banner(models.Model):
     start_date =models.DateField(auto_now=False, auto_now_add=False)
     end_date =models.DateField(auto_now=False, auto_now_add=False)
+    _end_date_old =None
     price = models.IntegerField(default = 0)
     installation_date = models.DateField(auto_now=False, auto_now_add=False)
     removal_date = models.DateField(auto_now=False, auto_now_add=False)
@@ -33,7 +34,7 @@ class Banner(models.Model):
 class Installation(models.Model):
     receiving_date =models.DateField(auto_now=False, auto_now_add=False)
     price = models.IntegerField()
-    banner = models.ForeignKey("new.Banner", verbose_name=_(""), on_delete=models.CASCADE)
+    banner = models.ForeignKey("new.Banner",  on_delete=models.CASCADE)
     update = models.BooleanField()
     def save(self, *args, **kwargs):
         if self.update:

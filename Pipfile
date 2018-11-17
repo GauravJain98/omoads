@@ -10,6 +10,7 @@ django = "*"
 dj-database-url = "*"
 django-heroku = "*"
 psycopg2 = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.5"
